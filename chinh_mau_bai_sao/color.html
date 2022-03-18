@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Color</title>
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th colspan="4" id="idboder" style="text-align: center;padding: 30px 0px; font-size: 40px;">RGB(255,255,255) </th>            
+        </tr>
+        <tr>
+            <td>RED</td>
+            <td>GREEN</td>
+            <td>BLUE</td>
+            <td>ALPHA</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="range" id="idred" min="0" max="255" value="91" oninput="changecolor()">
+            </td>
+            <td>
+                <input type="range" id="idgreen" min="0" max="255" value="91" oninput="changecolor()">
+            </td>
+            <td>
+                <input type="range" id="idblue" min="0" max="255" value="91" oninput="changecolor()">
+            </td>
+            <td>
+                <input type="range" id="idalpha" min="0" max="100" value="91" oninput="changecolor()">
+            </td>
+        </tr>
+        <tr>
+            <td class="input">100</td>
+            <td class="input">71</td>
+            <td class="input">36</td>
+            <td class="input">50</td>
+        </tr>
+    </table>
+    <script>
+        function changecolor(){
+            let REDD = Number(document.getElementById("idred").value);
+            let GREEN = Number(document.getElementById("idgreen").value);
+            let BLUE = Number(document.getElementById("idblue").value);
+            let ALPHA = (Number(document.getElementById("idalpha").value)/100).toFixed(1);
+            let stronger =  document.getElementsByClassName("input");
+            stronger[0].innerHTML = REDD
+            stronger[1].innerHTML = GREEN
+            stronger[2].innerHTML = BLUE
+            stronger[3].innerHTML = ALPHA
+            let colormore = `RGB(${REDD},${GREEN},${BLUE},${ALPHA})`
+            document.getElementById("idboder").innerText = colormore;
+            document.getElementById("idboder").style.backgroundColor = colormore;
+        }
+    </script>
+    
+    
+</body>
+</html>
