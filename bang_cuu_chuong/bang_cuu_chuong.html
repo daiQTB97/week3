@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng cửu chương</title>
+</head>
+<style>
+    table, tr, td{
+        border: 1;
+        
+    }
+</style>
+<body>
+    <h1 style="text-align: center;">BẢNG CỬU CHƯƠNG</h1>
+    <table id="mytable" style="width: 100%; ">
+        
+    </table>
+    <script>  
+    var table = document.getElementById("mytable");
+    var space, i, j;
+    space = "";
+    i=j=1
+    while(i<=10){
+        space += "<tr>";
+            while(j<=10){
+                space += "<td>" + j + "x" + i + "=" + j*i + "</td>";
+                j++;
+            }
+            space += "</tr>";
+            j=1;
+            i++;
+    }   
+    table.innerHTML = space
+         
+    </script>
+</body>
+</html>
