@@ -8,10 +8,15 @@
 </head>
 <body>
     <script>
-        i = 1;
-        while(i<100){
-            document.write("<hr width = " + i + "%>");
-            i++;
+        var a = prompt("nhập nhiệt độ");
+        if(a<20){
+            alert("tăng nhiệt độ");
+        }else{
+            if(a>100){
+                alert("giảm nhiệt độ");
+            }else{
+                alert("nhiệt độ phù hợp")
+            }
         }
     </script>
 </body>

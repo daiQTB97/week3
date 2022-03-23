@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ve trai tim</title>
+</head>
+<body>
+    <script>
+        let a = "<table width='300' cellspacing='0' cellpadding='3'>";
+        var i, j;
+        for(i=1; i<=6;i++){
+            a= a + "<tr>";
+            for(j=1;j<=7;j++){
+                if(!((i==1 && (j==1 || j==4 || j==7))
+                || (i==4 && (j==1 || j==7))
+                || (i==5 && (j<=2 || j>=6))
+                || (i==6 && (j<=3 || j>=5)))){
+                    a = a + "<td>" + "*" + "</td>";                    
+                }else{
+                    a = a + "<td>" + " " + "</td>";  
+                }
+                
+            }
+            a = a + "</tr>"
+        }
+        a = a + "</table>";
+        document.write(a);
+    </script>
+</body>
+</html>
