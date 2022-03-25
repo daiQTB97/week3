@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    h3 {
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <h3>MỜI NHẬP VÀO</h3>
+        <textarea class="result" name="" id="" cols="30" rows="10" oninput="Show()"></textarea>
+    </div>
+    <script>
+        let count = 0;
+        let Array_value = ['E','M',' ','Y','Ê','U',' ','A','N','H',' ','N','H','I','Ề','U',' ','L','Ắ','M'];
+        function Show(){
+            let result = "";
+            let text_value = document.getElementsByClassName("result")[0];
+            text_value.value = "";
+            if(count <= Array_value.length){         
+                for(i = 0 ; i < count ; i++){
+                    result = result + Array_value[i];
+                }
+                text_value.value = result;
+                count++
+            }else{
+                text_value.value = "";
+                count = 0;
+            }
+        }
+    </script>
+</body>
+</html>

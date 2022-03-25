@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let integer = [12,35,1,2,5,47,8,10,7,6];        
+        let max = integer[0];
+        let sum = 0
+        let average = 0
+        for(i=0;i<=integer.length-1;i++){
+           if(max<integer[i]){
+               max = integer[i];               
+            }
+            sum += integer[i];
+        }
+        average = (sum/integer.length).toFixed()
+
+        console.log(max + " là giá trị lớn hơn nhất");
+        console.log(average + " là giá trị trung bình");
+        
+    </script>
+</body>
+</html>
