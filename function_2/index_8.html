@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>       
+        function number(numbers){
+            /* let Num = numbers;            
+            let fisrt = 0;
+            let last = Num.length -1;
+            for (i=0; i<Num.length; i++){
+                 if (fisrt<last){
+                    tam = Num[fisrt];
+                    Num[fisrt] = Num[last];
+                    Num[last] = tam;
+                    fisrt++;
+                    last--;
+                } 
+            }  */  
+            let Num = numbers;         
+            return Num.reverse();                
+        }
+        let numbers1 = [1,2,3,4,5,6,7];
+        Num = number(numbers1)
+        console.log(Num);
+
+    </script>
+</body>
+</html>
